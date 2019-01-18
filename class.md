@@ -70,6 +70,34 @@ class Person {
 <img src="5.png" width="380">
 
 ## 상속
+
+- before
+
+```javascript
+function Rectangle (length, width) {
+  this.length = length;
+  this.width = width;
+}
+
+Rectangle.prototype.getArea = function () {
+  return this.length * this.width; 
+}
+
+function Square (length) {
+  Rectangle.call(this, length, length)
+}
+
+Squ
+
+class Square extends Rectangle {
+  constructor(length) {
+    super(length, length);
+  }
+}
+```
+
+- after
+
 ```javascript
 class Rectangle {
   constructor(length, width) {
@@ -92,4 +120,5 @@ class Square extends Rectangle {
 <img src="6.png" width="330">
 
 ### super 키워드가 가리키는 것은?
-- super(…) 는 this = new ParentConstructor(…) 의 syntactic sugar 일 뿐이다.
+- super(...): constructor 안에서만 호출 가능, 부모의 constructor 호출
+- super.method(...): 부모의 메서드 호출.

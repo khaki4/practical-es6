@@ -1,4 +1,4 @@
-# 함수
+# Function(함수)
 
 ## 매개변수 기본값
 
@@ -138,12 +138,12 @@ myFunction();    // Window
 
 ``` javascript
 function foo(){
-	console.log(this.a);
+    console.log(this.a);
 }
 
 var obj = {
-	a:2,
-	foo:foo
+    a:2,
+    foo:foo
 };
 
 obj.foo();  // 2 
@@ -154,7 +154,7 @@ obj.foo();  // 2
 var a = 'a';
 var b = 'b';
 function greet(a, b) {
-	console.log(this.name);
+    console.log(this.name);
     console.log(a, b);
 }
 
